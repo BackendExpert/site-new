@@ -12,7 +12,7 @@ const jobListings = [
             "Experience with REST APIs and Git",
             "Strong problem-solving and debugging skills"
         ],
-        applyLink: "https://example.com/apply-fullstack"
+        applyLink: "/"
     },
     {
         title: "UI/UX Designer",
@@ -25,7 +25,7 @@ const jobListings = [
             "Knowledge of responsive and accessible design",
             "Excellent communication and collaboration skills"
         ],
-        applyLink: "https://example.com/apply-uiux"
+        applyLink: "/"
     },
     {
         title: "Backend Developer",
@@ -38,7 +38,7 @@ const jobListings = [
             "Familiarity with version control (Git)",
             "Problem-solving mindset"
         ],
-        applyLink: "https://example.com/apply-backend"
+        applyLink: "/"
     },
     {
         title: "Marketing Manager",
@@ -51,7 +51,7 @@ const jobListings = [
             "Experience managing social media and content teams",
             "Strong analytical and leadership skills"
         ],
-        applyLink: "https://example.com/apply-marketing"
+        applyLink: "/"
     },
 ];
 
@@ -59,7 +59,7 @@ const CareersPage = () => {
     return (
         <section className="-mt-4 mb-8">
             {/* Header with Gradient */}
-            <header className="h-[60vh] bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 flex flex-col justify-center items-center text-white px-4 text-center">
+            <header className="h-[70vh] bg-gradient-to-r from-teal-500 via-blue-500 to-purple-500 flex flex-col justify-center items-center text-white px-4 text-center">
                 <h1 className="text-5xl font-extrabold mb-4">Careers</h1>
                 <p className="text-xl max-w-3xl mx-auto">
                     Join our team and help us create groundbreaking solutions for our clients and the community.
