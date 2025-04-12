@@ -3,40 +3,40 @@ import { FaGithub } from 'react-icons/fa';
 
 const projects = [
     {
-        title: "SASBOSS - Smart Admin System",
-        description: "A complete admin dashboard built with MERN stack, featuring user management, analytics, and role-based access.",
-        image: "/projects/sasboss.png", // update with your actual image path
-        link: "https://github.com/yourusername/sasboss"
+        title: "JKCSS - CSS Framework",
+        description: "The first South Asian CSS framework, designed for speed, flexibility, and elegance in modern web development. First South Asian CSS Framework",
+        image: "https://avatars.githubusercontent.com/u/139304882?s=64&v=4",
+        link: "https://github.com/JKCSS-CSS-Framework"
     },
     {
-        title: "VidsWe - Video Sharing Platform",
-        description: "A YouTube-inspired video sharing platform built for South Asia using React, Node, and MongoDB.",
-        image: "/projects/vidswe.png",
-        link: "https://github.com/yourusername/vidswe"
+        title: "ReactJKCSS",
+        description: "A React-integrated UI library powered by JKCSS, offering easy-to-use components for fast frontend development. First South Asian ReactJS Support CSS Framework",
+        image: "https://avatars.githubusercontent.com/u/167443241?s=200&v=4",
+        link: "https://github.com/React-JKCSS"
     },
     {
-        title: "PRC Gov Portal",
-        description: "A public service site for a regional council with announcements, events, and live updates, powered by MERN.",
-        image: "/projects/prc.png",
-        link: "#"
+        title: "CoconutDB",
+        description: "A NoSQL database solution similar to MongoDB, optimized for educational and lightweight projects. First South Asian NoSQL document oriented database",
+        image: "https://avatars.githubusercontent.com/u/189954645?s=64&v=4",
+        link: "https://github.com/CoconutDB"
     },
     {
-        title: "TravelBuddy App",
-        description: "A mobile-first travel guide for tourists in Sri Lanka. Built with React Native, Expo, and REST APIs.",
-        image: "/projects/travelbuddy.png",
-        link: "#"
+        title: "JKRecipeAPI",
+        description: "A powerful RESTful API for accessing and managing Sri Lankan recipes, built with Node.js.",
+        image: "https://avatars.githubusercontent.com/u/196493390?s=200&v=4",
+        link: "https://rapidapi.com/jehankandy/api/jkrecipeapi2"
     },
     {
-        title: "TravelBuddy App",
-        description: "A mobile-first travel guide for tourists in Sri Lanka. Built with React Native, Expo, and REST APIs.",
-        image: "/projects/travelbuddy.png",
-        link: "#"
+        title: "JKReact Icons",
+        description: "A rich set of custom React icons tailored for JKCSS-based apps and modern UIs.",
+        image: "https://avatars.githubusercontent.com/u/168010528?s=200&v=4",
+        link: "https://github.com/JKReact-Icons"
     },
     {
-        title: "TravelBuddy App",
-        description: "A mobile-first travel guide for tourists in Sri Lanka. Built with React Native, Expo, and REST APIs.",
-        image: "/projects/travelbuddy.png",
-        link: "#"
+        title: "Cookfydelight APK",
+        description: "An Android recipe app for food lovers in South Asia, built with React Native and JKRecipeAPI.",
+        image: "https://avatars.githubusercontent.com/u/196493390?s=200&v=4",
+        link: "https://rapidapi.com/jehankandy/api/jkrecipeapi2"
     },
 ];
 
@@ -58,7 +58,7 @@ const ProjectsShowcase = () => {
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-full h-52 object-cover rounded-t-2xl"
+                                className="w-32 h-32 object-cover rounded-full border-4 border-gray-100 mx-auto mt-6"
                             />
                             <div className="p-6 text-left">
                                 <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
@@ -69,7 +69,7 @@ const ProjectsShowcase = () => {
                                     rel="noopener noreferrer"
                                     className="inline-flex items-center text-indigo-600 font-medium hover:underline text-sm"
                                 >
-                                    <FaGithub className="mr-2" /> View Project
+                                    View Project
                                 </a>
                             </div>
                         </div>

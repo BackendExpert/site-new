@@ -22,7 +22,7 @@ const Footer = () => {
                         <h3 className="text-2xl font-semibold mb-4">Quick Links</h3>
                         <ul className="space-y-4">
                             <li>
-                                <a href="#services" className="hover:underline transition duration-300 ease-in-out">
+                                <a href="/Services" className="hover:underline transition duration-300 ease-in-out">
                                     Services
                                 </a>
                             </li>
@@ -37,7 +37,7 @@ const Footer = () => {
                                 </a>
                             </li>
                             <li>
-                                <a href="#about" className="hover:underline transition duration-300 ease-in-out">
+                                <a href="/Aboutus" className="hover:underline transition duration-300 ease-in-out">
                                     About
                                 </a>
                             </li>

@@ -16,7 +16,7 @@ const teamMembers = [
         },
     },
     {
-        name: 'Anuoa Gamage',
+        name: 'Anupa Gamage',
         role: 'Chief Technical Officer',
         image: CTO,
         socials: {

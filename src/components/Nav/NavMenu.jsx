@@ -7,17 +7,17 @@ const navmenu = [
     {
         id: 2,
         name: 'About',
-        link: '',
+        link: '/Aboutus',
     },
     {
         id: 3,
         name: 'Services',
-        link: '',
+        link: '/Services',
     },
     {
         id: 4,
         name: 'Projects',
-        link: '',
+        link: '/Projects',
     },
     {
         id: 5,
