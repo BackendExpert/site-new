@@ -1,22 +1,42 @@
 const navmenu = [
     {
         id: 1,
-        name: '',
-        link: '',
+        name: 'Home',
+        link: '/',
     },
     {
         id: 2,
-        name: '',
+        name: 'About',
         link: '',
     },
     {
         id: 3,
-        name: '',
+        name: 'Services',
         link: '',
     },
     {
         id: 4,
-        name: '',
+        name: 'Projects',
+        link: '',
+    },
+    {
+        id: 5,
+        name: 'Tech Stack',
+        link: '',
+    },
+    {
+        id: 6,
+        name: 'Careers',
+        link: '',
+    },
+    {
+        id: 7,
+        name: 'Insights',
+        link: '',
+    },
+    {
+        id: 7,
+        name: 'Contact Us',
         link: '',
     },
 ]

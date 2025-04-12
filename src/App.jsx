@@ -38,7 +38,7 @@ export default function App() {
       <div className={`fixed top-0 w-full z-50 transition-transform duration-300 ${showNavBar ? "translate-y-0" : "-translate-y-full"}`}>
         <Nav />
       </div>
-      <div className="mt-16">
+      <div className="mt-20">
         <Routes>
           <Route path="*" element={<ErrorPage />} />
           <Route path="/" element={<HomePage />} />
