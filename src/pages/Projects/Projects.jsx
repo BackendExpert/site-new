@@ -42,37 +42,37 @@ const projects = [
         "title": "jkmysql-easy NPM Package",
         "description": "A simple MySQL wrapper for easy integration with Node.js applications. Simplifies database connections and query executions.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/jkmysql-easy"
+        "link": "https://www.npmjs.com/package/jkmysql-easy"
     },
     {
         "title": "login-signup-react NPM Package",
         "description": "A React-based login and signup component with JWT authentication, designed for easy integration into modern web apps.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/login-signup-react"
+        "link": "https://www.npmjs.com/package/login-signup-react"
     },
     {
         "title": "setup-project-mern-mvc NPM Package",
         "description": "A simple npm package to quickly set up a MERN stack project with an MVC architecture, designed to streamline development.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/setup-project-mern-mvc"
+        "link": "https://www.npmjs.com/package/setup-project-mern-mvc"
     },
     {
         "title": "mern-mvc-gen NPM Package",
         "description": "A generator to quickly scaffold MERN stack applications with an MVC structure. Perfect for rapid development.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/mern-mvc-gen"
+        "link": "https://www.npmjs.com/package/mern-mvc-gen"
     },
     {
         "title": "JKCSS NPM Package",
         "description": "The first South Asian CSS framework, built to ensure speed, flexibility, and ease of use for modern web development.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/JKCSS-CSS-Framework"
+        "link": "https://www.npmjs.com/package/@jehankandy/jkcss"
     },
     {
         "title": "ReactJKCSS NPM Package",
         "description": "A React-integrated UI library powered by JKCSS, offering components that are optimized for fast and efficient frontend development.",
         "image": "https://icon.icepanel.io/Technology/svg/NPM.svg",
-        "link": "https://github.com/React-JKCSS"
+        "link": "https://www.npmjs.com/package/@jehankandy/react-jkcss"
     },
     {
         "title": "MERN Development VScode extension",
@@ -121,14 +121,6 @@ const Projects = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-                <div className="mt-14">
-                    <a
-                        href="#"
-                        className="inline-block px-8 py-4 bg-gradient-to-r from-indigo-500 via-blue-600 to-purple-500 text-white text-base sm:text-lg font-semibold rounded-full shadow-lg hover:from-purple-600 hover:to-indigo-600 transition duration-300 transform hover:scale-105"
-                    >
-                        View More Projects
-                    </a>
                 </div>
             </div>
         </section>

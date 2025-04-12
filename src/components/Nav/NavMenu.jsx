@@ -22,18 +22,18 @@ const navmenu = [
     {
         id: 5,
         name: 'Tech Stack',
-        link: '',
+        link: '/TechStack',
     },
     {
         id: 6,
         name: 'Careers',
-        link: '',
+        link: '/Careers',
     },
-    {
-        id: 7,
-        name: 'Insights',
-        link: '',
-    },
+    // {
+    //     id: 7,
+    //     name: 'Insights',
+    //     link: '',
+    // },
     {
         id: 7,
         name: 'Contact Us',

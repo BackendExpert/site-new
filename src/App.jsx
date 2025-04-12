@@ -7,6 +7,8 @@ import HomePage from "./pages/HomePage/HomePage";
 import AboutUsPage from "./pages/AboutUs/AboutUsPage";
 import Services from "./pages/Services/Services";
 import Projects from "./pages/Projects/Projects";
+import TechStackPage from "./pages/TechPage/TechStackPage";
+import CareersPage from "./pages/CareersPage/CareersPage";
 
 
 export default function App() {
@@ -47,7 +49,9 @@ export default function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/Aboutus" element={<AboutUsPage /> } />
           <Route path="/Services" element={<Services />} /> 
-          <Route path="/Projects" element={<Projects /> } /> 
+          <Route path="/Projects" element={<Projects /> } />
+          <Route path="/TechStack" element={<TechStackPage /> } />
+          <Route path="/Careers" element={<CareersPage /> } />
         </Routes>
       </div>
       <Footer />
