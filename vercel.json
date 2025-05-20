@@ -1,9 +1,15 @@
 {
-    "rewrites": [
-      {
-        "source": "/(.*)",
-        "destination": "/index.html"
-      }
-    ]
+  "redirects": [
+    {
+      "source": "/",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.blackalphalabs.com"
+        }
+      ],
+      "destination": "https://blackalphalabs.com",
+      "permanent": true
+    }
+  ]
 }
-  
