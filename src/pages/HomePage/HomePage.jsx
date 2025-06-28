@@ -1,5 +1,4 @@
 import React from 'react'
-import Slider from './Slider'
 import AboutUs from './AboutUs'
 import ServicesOverview from './ServicesOverview'
 import WhyChooseUs from './WhyChooseUs'
@@ -8,11 +7,12 @@ import ProjectsShowcase from './ProjectsShowcase'
 import OurTeam from './OurTeam'
 import ContactUs from './ContactUs'
 import CTASection from './CTASection'
+import HeroSection from './HeroSection'
 
 const HomePage = () => {
   return (
     <div className='-mt-4'>
-        <Slider />
+        <HeroSection />
         <AboutUs />
         <ServicesOverview />
         <WhyChooseUs />
