@@ -11,6 +11,7 @@ import TechStackPage from "./pages/TechPage/TechStackPage";
 import CareersPage from "./pages/CareersPage/CareersPage";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import OnlinePlatforms from "./pages/onlineplatforms/OnlinePlatforms";
+import LearningHub from "./pages/LearningHub/LearningHub";
 
 
 export default function App() {
@@ -56,6 +57,7 @@ export default function App() {
           <Route path="/Careers" element={<CareersPage /> } />
           <Route path="/ContactUs" element={<ContactUs /> } />
           <Route path="/onlineplatforms" element={<OnlinePlatforms /> } />
+          <Route path="/LearningHub" element={<LearningHub /> } />
         </Routes>
       </div>
       <Footer />

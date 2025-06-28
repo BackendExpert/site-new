@@ -7,7 +7,7 @@ const OnlinePlatforms = () => {
             id: 1,
             name: 'Learning Hub - by Blackalphalabs',
             desc: 'This platform is made to help you quickly access tech information, resources, and guides in one place.',
-            link: '#',
+            link: '/LearningHub',
             available: true,
         },
         {
