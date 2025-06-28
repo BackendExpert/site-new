@@ -32,7 +32,7 @@ const navmenu = [
     {
         id: 7,
         name: 'Online Platforms',
-        link: '',
+        link: '/onlineplatforms',
     },
     {
         id: 7,
