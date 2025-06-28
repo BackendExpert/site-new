@@ -29,11 +29,11 @@ const navmenu = [
         name: 'Careers',
         link: '/Careers',
     },
-    // {
-    //     id: 7,
-    //     name: 'Insights',
-    //     link: '',
-    // },
+    {
+        id: 7,
+        name: 'Online Platforms',
+        link: '',
+    },
     {
         id: 7,
         name: 'Contact Us',
