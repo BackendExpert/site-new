@@ -4,62 +4,90 @@ import sitelogo from '../../assets/SiteLogo.png';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 overflow-hidden 
-      bg-gradient-to-br from-[#0a0f24] to-[#020916] text-white">
+        <section className="relative min-h-screen flex items-center justify-center px-6 md:px-12 
+            bg-gradient-to-tr from-[#0d0b1f] via-[#15132c] to-[#1c1a3d] text-white overflow-hidden">
 
-            {/* Animated floating shapes */}
-            <div className="absolute top-20 left-20 w-6 h-6 bg-[#00fff7] rounded-full animate-bounce-slow shadow-[0_0_10px_#00fff7]"></div>
-            <div className="absolute top-40 right-24 w-8 h-8 bg-[#00ff94] rounded-full animate-bounce-delay shadow-[0_0_15px_#00ff94]"></div>
-            <div className="absolute bottom-32 left-[45%] w-10 h-10 bg-[#00bfff] rounded-full animate-bounce-slow shadow-[0_0_20px_#00bfff]"></div>
-            <div className="absolute bottom-20 right-[15%] w-5 h-5 bg-[#08ffc8] rounded-full animate-bounce-delay shadow-[0_0_8px_#08ffc8]"></div>
+            {/* Small scattered dots */}
+            {[...Array(40)].map((_, i) => (
+                <div 
+                    key={i}
+                    className={`absolute w-[2px] h-[2px] rounded-full bg-white/30 animate-pulse`}
+                    style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 2}s`
+                    }}
+                />
+            ))}
 
-            {/* Main content */}
-            <div className="relative z-10 max-w-7xl w-full grid md:grid-cols-2 items-center gap-12">
+            {/* Content */}
+            <div className="relative z-10 max-w-4xl w-full flex flex-col items-center space-y-8 py-20">
+                
+                {/* Logo with gentle float animation */}
+                <img 
+                    src={sitelogo} 
+                    alt="Black Alpha Labs Logo" 
+                    className="w-28 md:w-36 object-contain drop-shadow-[0_0_20px_rgba(236,72,153,0.6)] 
+                    animate-[float_4s_ease-in-out_infinite]"
+                />
 
-                {/* Text */}
-                <div className="space-y-8 text-center md:text-left mx-auto">
-                    <h1
-                        className="text-4xl md:text-6xl font-extrabold leading-snug tracking-tight
-            bg-gradient-to-r from-[#00fff7] via-[#00bfff] to-[#00ff94]
-            bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(0,255,247,0.7)]"
+                {/* Heading with fade up */}
+                <h1 className="text-4xl md:text-6xl font-bold leading-tight tracking-wide 
+                    bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400
+                    bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]
+                    animate-[fadeup_1s_ease-out]"
+                >
+                    Build the Future with <br /> Black Alpha Labs
+                </h1>
+
+                {/* Paragraph with delayed fade up */}
+                <p className="text-lg md:text-xl max-w-2xl mx-auto text-white/80
+                    animate-[fadeup_1s_0.3s_ease-out]"
+                    style={{ animationDelay: '0.5s' }}
+                >
+                    Cutting-edge software solutions designed for speed, scale, and stunning experiences.
+                </p>
+
+                {/* Buttons with slight scale in */}
+                <div className="flex justify-center gap-6 mt-6 flex-wrap
+                    animate-[fadeup_1s_0.6s_ease-out]"
+                    style={{ animationDelay: '0.8s' }}
+                >
+                    <a
+                        href="#get-started"
+                        className="px-8 py-3 rounded-full font-semibold text-white
+                            border border-pink-400 hover:bg-pink-400 hover:text-[#0d0b1f]
+                            shadow-[0_0_12px_rgba(236,72,153,0.5)]
+                            transition duration-300 ease-out"
                     >
-                        Powering Tomorrow with <br /> BLACK ALPHA LABS
-                    </h1>
-                    <p className="text-lg md:text-xl max-w-xl text-white/90 mx-auto md:mx-0 drop-shadow-[0_0_4px_rgba(0,255,247,0.5)]">
-                        We craft scalable digital products with precision and passion — delivering unmatched software for startups, enterprises, and everything in between.
-                    </p>
-
-                    {/* CTA Buttons */}
-                    <div className="flex gap-4 mt-6 flex-wrap justify-center md:justify-start">
-                        <a
-                            href="#get-started"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold text-[#001f3f] bg-[#00fff7] shadow-[0_0_12px_#00fff7] hover:scale-105 hover:bg-[#00ccbd] transition duration-300"
-                        >
-                            Get Started <ArrowRight size={18} />
-                        </a>
-                        <a
-                            href="#learn-more"
-                            className="inline-flex items-center gap-2 px-6 py-3 rounded-full font-semibold border border-[#00fff7] shadow-[0_0_10px_#00fff7] hover:bg-[#00fff7] hover:text-[#001f3f] transition duration-300"
-                        >
-                            Learn More
-                        </a>
-                    </div>
+                        Get Started <ArrowRight size={18} className="inline ml-2" />
+                    </a>
+                    <a
+                        href="#learn-more"
+                        className="px-8 py-3 rounded-full font-semibold text-white
+                            border border-cyan-400 hover:bg-cyan-400 hover:text-[#0d0b1f]
+                            shadow-[0_0_12px_rgba(34,211,238,0.5)]
+                            transition duration-300 ease-out"
+                    >
+                        Learn More
+                    </a>
                 </div>
-
             </div>
 
-            {/* Clean single bottom curve */}
-            <svg
-                className="absolute bottom-0 left-0 w-full"
-                viewBox="0 0 1440 320"
-                xmlns="http://www.w3.org/2000/svg"
-            >
-                <path
-                    fill="#ffffff"
-                    fillOpacity="1"
-                    d="M0,224L48,213.3C96,203,192,181,288,186.7C384,192,480,224,576,218.7C672,213,768,171,864,165.3C960,160,1056,192,1152,192C1248,192,1344,160,1392,144L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"
-                ></path>
-            </svg>
+            {/* Subtle fade at bottom */}
+            <div className="absolute bottom-0 left-0 w-full h-32 bg-gradient-to-t from-[#0d0b1f] to-transparent"></div>
+
+            {/* Tailwind custom animations */}
+            <style jsx>{`
+                @keyframes float {
+                    0%, 100% { transform: translateY(0); }
+                    50% { transform: translateY(-10px); }
+                }
+                @keyframes fadeup {
+                    0% { opacity: 0; transform: translateY(20px); }
+                    100% { opacity: 1; transform: translateY(0); }
+                }
+            `}</style>
         </section>
     );
 };

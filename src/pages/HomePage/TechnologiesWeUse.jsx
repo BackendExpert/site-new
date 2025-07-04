@@ -8,23 +8,34 @@ const techStack = [
     { name: 'React.js', icon: <SiReact className="text-cyan-400 w-10 h-10" /> },
     { name: 'Node.js', icon: <SiNodedotjs className="text-green-500 w-10 h-10" /> },
     { name: 'MongoDB', icon: <SiMongodb className="text-green-600 w-10 h-10" /> },
-    { name: 'Express.js', icon: <SiExpress className="text-gray-800 w-10 h-10" /> },
-    { name: 'PHP', icon: <SiPhp className="text-indigo-600 w-10 h-10" /> },
-    { name: 'MySQL', icon: <SiMysql className="text-blue-600 w-10 h-10" /> },
+    { name: 'Express.js', icon: <SiExpress className="text-gray-200 w-10 h-10" /> },
+    { name: 'PHP', icon: <SiPhp className="text-indigo-400 w-10 h-10" /> },
+    { name: 'MySQL', icon: <SiMysql className="text-blue-400 w-10 h-10" /> },
     { name: 'Tailwind CSS', icon: <SiTailwindcss className="text-sky-400 w-10 h-10" /> },
-    { name: 'JavaScript', icon: <SiJavascript className="text-yellow-400 w-10 h-10" /> },
-    { name: 'HTML5', icon: <SiHtml5 className="text-orange-500 w-10 h-10" /> },
-    { name: 'CSS3', icon: <SiCss3 className="text-blue-500 w-10 h-10" /> },
+    { name: 'JavaScript', icon: <SiJavascript className="text-yellow-300 w-10 h-10" /> },
+    { name: 'HTML5', icon: <SiHtml5 className="text-orange-400 w-10 h-10" /> },
+    { name: 'CSS3', icon: <SiCss3 className="text-blue-300 w-10 h-10" /> },
 ];
 
 const TechnologiesWeUse = () => {
     return (
-        <section className="py-20 px-6 sm:px-12 bg-white text-center">
-            <div className="max-w-7xl mx-auto">
-                <h2 className="text-4xl sm:text-5xl font-extrabold text-gray-800 mb-6">
+        <section className="relative py-24 bg-gradient-to-br from-[#0d0b1f] via-[#15132c] to-[#1c1a3d] text-white overflow-hidden">
+            {[...Array(30)].map((_, i) => (
+                <div
+                    key={i}
+                    className="absolute w-[2px] h-[2px] rounded-full bg-white/10 animate-pulse"
+                    style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 2}s`
+                    }}
+                />
+            ))}
+            <div className="max-w-7xl mx-auto text-center px-6 relative z-10">
+                <h2 className="text-5xl font-extrabold mb-6 bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
                     Technologies We Use
                 </h2>
-                <p className="text-lg sm:text-xl text-gray-600 mb-12 max-w-3xl mx-auto">
+                <p className="text-lg text-white/80 mb-12 max-w-3xl mx-auto">
                     We leverage the latest and most powerful technologies to deliver high-quality, scalable solutions tailored to your business.
                 </p>
 
@@ -32,10 +43,10 @@ const TechnologiesWeUse = () => {
                     {techStack.map((tech, index) => (
                         <div
                             key={index}
-                            className="flex flex-col items-center justify-center bg-gray-100 rounded-xl p-6 shadow-md hover:shadow-xl transform hover:-translate-y-1 transition-all duration-300"
+                            className="flex flex-col items-center bg-[#15132c]/70 backdrop-blur rounded-xl p-6 shadow-lg hover:shadow-[0_0_20px_rgba(236,72,153,0.4)] transform hover:scale-105 transition-all duration-300"
                         >
                             {tech.icon}
-                            <p className="mt-3 font-medium text-gray-700">{tech.name}</p>
+                            <p className="mt-3 font-medium text-white/80">{tech.name}</p>
                         </div>
                     ))}
                 </div>
