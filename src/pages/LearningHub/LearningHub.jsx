@@ -124,7 +124,7 @@ const LearningHub = () => {
                     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition duration-300">
                         <Smartphone className="w-12 h-12 text-indigo-600 mb-4 mx-auto" />
                         <h3 className="text-2xl font-bold text-indigo-700 mb-2">Download Android APK</h3>
-                        <a href="../../assets/files/LearningHub.apk" className="text-indigo-600 font-semibold hover:underline">Get APK</a>
+                        <a href="/LearningHub.apk" className="text-indigo-600 font-semibold hover:underline">Get APK</a>
                     </div>
                     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition duration-300">
                         <BookOpen className="w-12 h-12 text-indigo-600 mb-4 mx-auto" />
