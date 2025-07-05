@@ -82,43 +82,65 @@ const projects = [
     }
 ];
 
-
 const Projects = () => {
     return (
-        <section className="-mt-4 mb-8">
-            {/* Header with Gradient */}
-            <header className="h-[70vh] bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-500 flex flex-col justify-center items-center text-white px-4 text-center">
-                <h1 className="text-5xl font-extrabold mb-4">Our Projects</h1>
-                <p className="text-xl max-w-3xl mx-auto">
+        <section className="relative py-24 bg-gradient-to-br from-[#0d0b1f] via-[#15132c] to-[#1c1a3d] text-white overflow-hidden">
+
+            {/* Floating dots */}
+            {[...Array(30)].map((_, i) => (
+                <div
+                    key={i}
+                    className="absolute w-[2px] h-[2px] rounded-full bg-white/20 animate-pulse"
+                    style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 2}s`
+                    }}
+                />
+            ))}
+
+            {/* Header */}
+            <header className="text-center mb-20 min-h-[50vh] flex flex-col justify-center items-center px-6">
+                <h1 className="text-5xl font-extrabold mb-6
+                    bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 
+                    bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
+                    Our Projects
+                </h1>
+                <p className="text-lg max-w-3xl text-white/80">
                     Explore a few of the powerful applications we've built for startups, government, and the open-source community.
                 </p>
             </header>
 
-            {/* Projects Section */}
-            <div className="max-w-7xl mx-auto text-center mt-14">
+            {/* Projects Grid */}
+            <div className="max-w-7xl mx-auto px-6">
                 <div className="grid grid-cols-1 md:grid-cols-3 xl:grid-cols-4 gap-10">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className="bg-white rounded-2xl shadow-lg hover:shadow-2xl transition transform hover:-translate-y-1 duration-300"
+                            className="relative bg-[#1f1d3a] rounded-3xl p-6 shadow-[0_0_30px_rgba(236,72,153,0.2)]
+                                border border-pink-500/10 hover:shadow-[0_0_40px_rgba(236,72,153,0.4)]
+                                transition-all duration-300 group flex flex-col items-center text-center"
                         >
                             <img
                                 src={project.image}
                                 alt={project.title}
-                                className="w-32 h-32 object-cover rounded-full border-4 border-gray-100 mx-auto mt-6"
+                                className="w-24 h-24 object-cover rounded-full border-4 border-gray-800 mb-6"
                             />
-                            <div className="p-6 text-left">
-                                <h3 className="text-xl font-semibold text-gray-800 mb-2">{project.title}</h3>
-                                <p className="text-sm text-gray-600 mb-4">{project.description}</p>
-                                <a
-                                    href={project.link}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    className="inline-flex items-center text-indigo-600 font-medium hover:underline text-sm"
-                                >
-                                    View Project
-                                </a>
-                            </div>
+                            <h3 className="text-xl font-semibold mb-2
+                                bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400
+                                bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]">
+                                {project.title}
+                            </h3>
+                            <p className="text-white/70 text-sm mb-6">{project.description}</p>
+                            <a
+                                href={project.link}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center text-cyan-400 font-semibold hover:underline text-sm"
+                            >
+                                View Project
+                                <FaGithub className="ml-2 w-4 h-4" />
+                            </a>
                         </div>
                     ))}
                 </div>
