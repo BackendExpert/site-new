@@ -2,86 +2,129 @@ import React from 'react';
 import { ArrowUpRight } from 'lucide-react';
 
 const OnlinePlatforms = () => {
-    const livePlatforms = [
+    const platforms = [
         {
             id: 1,
             name: 'Learning Hub - by BlackAlphaLabs',
-            desc: 'This platform helps you quickly access tech info, resources, and guides in one place.',
+            desc: 'This platform helps you quickly access tech information, resources, and guides in one place.',
             link: '/LearningHub',
             available: true,
         },
     ];
 
-    // Showcase only section for CoconutDB & JKCSS
-    const explorePlatforms = [
+    const tools = [
         {
             id: 1,
             name: 'JKCSS Framework',
             desc: 'South Asia’s first CSS framework — minimal, fast, developer-friendly.',
-            available: false,
+            link: 'https://github.com/JKCSS-CSS-Framework',
+            available: true,
         },
         {
             id: 2,
             name: 'Coconut DB',
-            desc: 'Sri Lanka’s first NoSQL document-oriented database system.',
-            available: false,
+            desc: 'South Asia’s first NoSQL document-oriented database system.',
+            link: 'https://github.com/CoconutDB',
+            available: true,
         },
     ];
 
     return (
-        <div className="bg-gradient-to-br from-[#f0f4ff] to-white p-6 mt-20">
-            {/* Hero Section */}
-            <div className="text-center mb-16 pt-24">
-                <h1 className="text-4xl md:text-6xl font-extrabold text-indigo-700 mb-4">
+        <section className="relative py-24 bg-gradient-to-br from-[#0d0b1f] via-[#15132c] to-[#1c1a3d] text-white overflow-hidden">
+
+            {/* Floating dots */}
+            {[...Array(30)].map((_, i) => (
+                <div
+                    key={i}
+                    className="absolute w-[2px] h-[2px] rounded-full bg-white/20 animate-pulse"
+                    style={{
+                        top: `${Math.random() * 100}%`,
+                        left: `${Math.random() * 100}%`,
+                        animationDelay: `${Math.random() * 2}s`
+                    }}
+                />
+            ))}
+
+            <div className="max-w-7xl mx-auto px-6 relative z-10 text-center">
+                {/* Platforms Section */}
+                <h2 className="text-5xl font-extrabold leading-tight mb-6
+                    bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 
+                    bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
                     Explore Our Online Platforms
-                </h1>
-                <p className="text-gray-600 text-lg md:text-xl max-w-2xl mx-auto">
-                    Discover modern tools and resources crafted by BlackAlphaLabs to empower developers across South Asia.
+                </h2>
+                <p className="text-lg text-white/80 max-w-3xl mx-auto mb-16">
+                    Discover online platforms crafted by BlackAlphaLabs to empower developers & businesses across South Asia.
                 </p>
-            </div>
 
-            {/* Featured (Explore) Platforms Row */}
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 max-w-6xl mx-auto mb-20">
-                {explorePlatforms.map((item) => (
-                    <div
-                        key={item.id}
-                        className="relative bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-indigo-200 transition duration-300 overflow-hidden"
-                    >
-                        {!item.available && (
-                            <div className="absolute inset-0 bg-white/70 backdrop-blur-sm rounded-2xl flex items-center justify-center z-10">
-                                <span className="text-indigo-700 font-extrabold text-xl">Coming Soon</span>
-                            </div>
-                        )}
-                        <div className={`${!item.available ? 'opacity-70 blur-sm select-none pointer-events-none' : ''}`}>
-                            <h2 className="text-2xl font-bold text-indigo-700 mb-3">{item.name}</h2>
-                            <p className="text-gray-600">{item.desc}</p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12 mb-24">
+                    {platforms.map((item) => (
+                        <div
+                            key={item.id}
+                            className="relative bg-[#1f1d3a] rounded-3xl p-8 shadow-[0_0_30px_rgba(236,72,153,0.2)]
+                                border border-pink-500/10 hover:shadow-[0_0_40px_rgba(236,72,153,0.4)]
+                                transition-all duration-300 group overflow-hidden"
+                        >
+                            <h3 className="text-2xl font-bold mb-4
+                                bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400
+                                bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]">
+                                {item.name}
+                            </h3>
+                            <p className="text-white/70 mb-6">{item.desc}</p>
+                            {item.available && (
+                                <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-cyan-400 font-semibold group hover:underline"
+                                >
+                                    Visit Platform
+                                    <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition duration-300" />
+                                </a>
+                            )}
                         </div>
-                    </div>
-                ))}
-            </div>
+                    ))}
+                </div>
 
-            {/* Active Platforms Grid */}
-            <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3 pb-24 max-w-6xl mx-auto">
-                {livePlatforms.map((item) => (
-                    <div
-                        key={item.id}
-                        className="bg-white rounded-2xl p-6 shadow-lg border border-gray-100 hover:shadow-xl hover:border-indigo-200 transition duration-300"
-                    >
-                        <h2 className="text-2xl font-bold text-indigo-700 mb-3">{item.name}</h2>
-                        <p className="text-gray-600 mb-4">{item.desc}</p>
-                        {item.available && (
-                            <a
-                                href={item.link}
-                                className="inline-flex items-center text-indigo-600 font-semibold group"
-                            >
-                                Visit Platform
-                                <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition duration-300" />
-                            </a>
-                        )}
-                    </div>
-                ))}
+                {/* Tools Section */}
+                <h2 className="text-5xl font-extrabold leading-tight mb-6
+                    bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400 
+                    bg-clip-text text-transparent drop-shadow-[0_0_10px_rgba(236,72,153,0.6)]">
+                    Explore Our Tools
+                </h2>
+                <p className="text-lg text-white/80 max-w-3xl mx-auto mb-16">
+                    Innovative developer tools and frameworks we’re building to power the next generation of apps.
+                </p>
+
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
+                    {tools.map((item) => (
+                        <div
+                            key={item.id}
+                            className="relative bg-[#1f1d3a] rounded-3xl p-8 shadow-[0_0_30px_rgba(236,72,153,0.2)]
+                                border border-pink-500/10 hover:shadow-[0_0_40px_rgba(236,72,153,0.4)]
+                                transition-all duration-300 group overflow-hidden"
+                        >
+                            <h3 className="text-2xl font-bold mb-4
+                                bg-gradient-to-r from-pink-400 via-purple-400 to-cyan-400
+                                bg-clip-text text-transparent drop-shadow-[0_0_8px_rgba(236,72,153,0.6)]">
+                                {item.name}
+                            </h3>
+                            <p className="text-white/70 mb-6">{item.desc}</p>
+                            {item.available && (
+                                <a
+                                    href={item.link}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="inline-flex items-center text-cyan-400 font-semibold group hover:underline"
+                                >
+                                    View Tool
+                                    <ArrowUpRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition duration-300" />
+                                </a>
+                            )}
+                        </div>
+                    ))}
+                </div>
             </div>
-        </div>
+        </section>
     );
 };
 

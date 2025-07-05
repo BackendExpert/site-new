@@ -14,6 +14,8 @@ import {
     MonitorSmartphone,
 } from 'lucide-react';
 
+
+
 const LearningHub = () => {
     const features = [
         {
@@ -122,12 +124,7 @@ const LearningHub = () => {
                     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition duration-300">
                         <Smartphone className="w-12 h-12 text-indigo-600 mb-4 mx-auto" />
                         <h3 className="text-2xl font-bold text-indigo-700 mb-2">Download Android APK</h3>
-                        <a href="#" className="text-indigo-600 font-semibold hover:underline">Get APK</a>
-                    </div>
-                    <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition duration-300">
-                        <MonitorSmartphone className="w-12 h-12 text-indigo-600 mb-4 mx-auto" />
-                        <h3 className="text-2xl font-bold text-indigo-700 mb-2">Download for Windows</h3>
-                        <a href="#" className="text-indigo-600 font-semibold hover:underline">Get EXE</a>
+                        <a href="../../assets/files/LearningHub.apk" className="text-indigo-600 font-semibold hover:underline">Get APK</a>
                     </div>
                     <div className="bg-white rounded-2xl p-6 border border-gray-100 shadow-lg hover:shadow-xl transition duration-300">
                         <BookOpen className="w-12 h-12 text-indigo-600 mb-4 mx-auto" />
@@ -139,10 +136,6 @@ const LearningHub = () => {
 
             {/* Final CTA */}
             <div className="text-center">
-                <a href="#" className="inline-flex items-center gap-2 px-10 py-5 text-xl font-semibold text-white bg-indigo-600 rounded-full hover:bg-indigo-700 transition duration-300 shadow-lg hover:scale-105">
-                    Start Exploring
-                    <ArrowRight className="w-6 h-6" />
-                </a>
                 <p className="mt-3 text-sm text-gray-500">No signup required. Free and open 24/7.</p>
             </div>
         </div>
