@@ -6,7 +6,7 @@ import CTO from '../../assets/CTO.jpg';
 const teamMembers = [
     {
         name: 'Jehan Weerasuriya',
-        role: 'Chief Executive Officer | Lead Fullstack Developer',
+        role: 'Chief Executive Officer | Lead FullStack Cross-Platform Developer | ',
         image: CEO,
         socials: { linkedin: '', facebook: '', instagram: '', portfolio: '' },
     },
