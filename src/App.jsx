@@ -12,6 +12,7 @@ import CareersPage from "./pages/CareersPage/CareersPage";
 import ContactUs from "./pages/ContactUs/ContactUs";
 import OnlinePlatforms from "./pages/onlineplatforms/OnlinePlatforms";
 import LearningHub from "./pages/LearningHub/LearningHub";
+import SMPage from "./pages/SecureMernNPM/SMPage";
 
 
 export default function App() {
@@ -58,6 +59,7 @@ export default function App() {
           <Route path="/ContactUs" element={<ContactUs /> } />
           <Route path="/onlineplatforms" element={<OnlinePlatforms /> } />
           <Route path="/LearningHub" element={<LearningHub /> } />
+          <Route path="/secure-mern" element={<SMPage /> } />
         </Routes>
       </div>
       <Footer />
