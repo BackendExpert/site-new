@@ -10,6 +10,15 @@ const OnlinePlatforms = () => {
             link: '/LearningHub',
             available: true,
         },
+        {
+            id: 2,
+            name: 'Github Readme Genarator',
+            desc: 'Generate GitHub README and fetch status information for any username using the GitHub API.',
+            link: '/LearningHub',
+            available: true,
+        }
+
+
     ];
 
     const tools = [
