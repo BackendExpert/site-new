@@ -14,7 +14,7 @@ const OnlinePlatforms = () => {
             id: 2,
             name: 'Github Readme Genarator',
             desc: 'Generate GitHub README and fetch status information for any username using the GitHub API.',
-            link: '/LearningHub',
+            link: '/githubReadme',
             available: true,
         }
 
